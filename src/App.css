@@ -1,0 +1,127 @@
+*{
+	box-sizing: border-box;
+}
+
+body{
+	background-color: #132030;
+	color: #fff;
+	font-size: 14px;
+}
+
+img{
+	width: 100%;
+}
+
+.container{
+	width: 80%;
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+/*  app wire  */
+.pictureApp{
+	white-space: nowrap;
+	max-width: 100%;
+	overflow: hidden;
+	overflow: hidden;
+}
+.pictureApp > div{
+	display: inline-block;
+	width: 100%;
+	vertical-align: top;
+	transform: translateX(0);
+	transition: .3s;
+}
+
+.pictureApp > div.slideshowtoggled{
+	transform: translateX(-100%)
+}
+
+/* picture list */
+.picture-list{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	overflow-y: auto
+}
+.picture-list__image{
+	width: 320px;
+	max-width: 100%;
+	padding: 20px;
+}
+.picture-list__image img{
+	cursor: pointer;
+}
+
+/* picture slider */
+.slider-wrapper{
+	position: relative;
+	width: 80%;
+	max-width: 600px;
+	margin: 0 auto;
+}
+
+@media screen and (max-width: 500px){
+	.slider-wrapper{
+		width: 100%;
+	}
+}
+
+#closeBtn{
+	padding: 20px;
+	font-size: 2rem;
+	cursor: pointer;
+	display: inline-block;
+}
+
+.slider-wrapper__btn{
+	position: absolute;
+	top: 40%;
+	cursor: pointer;
+	font-size: 2rem;
+	color: #efefef6b;
+}
+.slider-wrapper__btn:hover{
+	color: #efefef;
+}
+
+.slider-wrapper__btn--backbtn{
+	left: 10px;
+}
+
+.slider-wrapper__btn--nextbtn{
+	right: 10px;
+}
+
+.slider{
+	width: 80%;
+	margin: 0 auto;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+.slider__image{
+	width: 100%;
+	display: inline-block;
+}
+
+/* slider dots */
+.pagination{
+	display: flex;
+	justify-content: center;
+	margin: 30px 0;
+}
+.pagination__dot{
+	background-color: #ffffff4f;
+	display: block;
+	width: 8px;
+	height: 8px;
+	margin: 0 6px;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+.pagination__dot--active{
+	background-color: #fff;
+}
+
